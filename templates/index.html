@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+    {% block title %}
+<title>Hello Homepages</title>
+{% endblock %}
+ 
+{% block content %}
+
+<h1> Hello Flask Templates</h1>
+
+{% if post %}
+{% for blog in post %}
+<div class="container">
+
+    <h2>{{blog.title}} </h2>
+    <p>{{blog.body}} </p>
+    <p>{{blog.author}} </p>
+</div>
+{% endfor %}
+{% else %}
+No Blog
+{% endif %}
+
+
+{% include 'footer.html' %}
+{% endblock %}
+   
+   
